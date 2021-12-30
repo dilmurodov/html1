@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: #dedede;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.login{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    border: 1px solid #d2d2d2;
+    border-radius: 10px;
+}
+
+.login h1{
+    cursor: pointer;
+    text-align: center;
+    font-size: 30px;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+}
+.login form{
+    padding: 0 40px;
+}
+
+form .field{
+    position: relative;
+    border-bottom: 2px solid silver;
+    margin: 30px 0;
+}
+.field input{
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.field label{
+    position: absolute;
+    top: 50%;
+    font-size: 16px;
+    transform: translateY(-50%);
+    color: silver;
+    cursor: pointer;
+}
+
+.field span::before{
+    content: '';
+    position: absolute;
+    background: black;
+    width: 0%;
+    height: 2px;
+    transition: .7s;
+}
+
+.field input:focus ~ label{
+    top: -4px;
+    color: black;
+}
+
+.field input:focus ~ span::before{
+    width: 100%;
+}
+
+input[type="submit"]{
+    width: 100%;
+    font-weight: 600;
+    background: rgb(190, 210, 241);
+    outline: none;
+    border: none;
+    color: #ffffff;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    background: rgb(58, 109, 185);
+    transition: .5s;
+}
+
+.pass{
+    cursor: pointer;
+    margin: 10px 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+.pass:hover{
+    text-decoration: underline;
+    color: rgb(58, 109, 185);
+}
